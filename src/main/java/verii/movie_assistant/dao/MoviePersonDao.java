@@ -16,5 +16,5 @@ import verii.movie_assistant.model.MoviePerson;
 public interface MoviePersonDao extends GenericDao<MoviePerson,Integer>{
     
     List<MoviePerson> findAll();
-    List<MoviePerson> findByFirstName(String inFirtsName);
+    List<MoviePerson> findByFirstName(String firstName);
 }

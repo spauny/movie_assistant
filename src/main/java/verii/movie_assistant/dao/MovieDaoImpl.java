@@ -29,8 +29,8 @@ public class MovieDaoImpl extends GenericDaoImpl<Movie,Integer> implements Movie
     
     @Override
     @Transactional(readOnly = true,propagation = Propagation.SUPPORTS)
-    public List<Movie> findByTitle(String inTitle) {
-      return em.createNamedQuery("Movie.findByTitle").setParameter("FirstName",inTitle).getResultList();
+    public List<Movie> findByTitle(String title) {
+      return em.createNamedQuery("Movie.findByTitle").setParameter("FirstName",title).getResultList();
     }
     
 }
