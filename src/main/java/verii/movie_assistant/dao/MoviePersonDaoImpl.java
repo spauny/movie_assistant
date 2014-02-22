@@ -28,7 +28,7 @@ public class MoviePersonDaoImpl extends GenericDaoImpl<MoviePerson,Integer> impl
     }
     @Override
     @Transactional(readOnly = true,propagation = Propagation.SUPPORTS)
-    public List<MoviePerson> findByFirstName(String inFirtsName) {
-      return em.createNamedQuery("MoviePerson.findByFirstName").setParameter("FirstName",inFirtsName).getResultList();
+    public List<MoviePerson> findByFirstName(String firstName) {
+      return em.createNamedQuery("MoviePerson.findByFirstName").setParameter("FirstName",firstName).getResultList();
     }
 }

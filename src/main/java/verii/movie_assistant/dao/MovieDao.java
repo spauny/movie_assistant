@@ -16,7 +16,7 @@ import verii.movie_assistant.model.Movie;
 public interface MovieDao extends GenericDao<Movie,Integer> {
     
     List<Movie> findAll();
-    List<Movie>findByTitle(String inTitle);
+    List<Movie>findByTitle(String title);
 }
     
 
