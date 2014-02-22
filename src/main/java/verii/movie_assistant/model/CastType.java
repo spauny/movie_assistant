@@ -32,7 +32,7 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "CastType.findAll", query = "SELECT c FROM CastType c"),
     @NamedQuery(name = "CastType.findById", query = "SELECT c FROM CastType c WHERE c.id = :id"),
     @NamedQuery(name = "CastType.findByType", query = "SELECT c FROM CastType c WHERE c.type = :type")})
-public class CastType implements EntityItem {
+public class CastType implements EntityItem<Integer> {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
