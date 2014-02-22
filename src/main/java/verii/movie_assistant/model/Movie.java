@@ -36,7 +36,7 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "Movie.findByDescription", query = "SELECT m FROM Movie m WHERE m.description = :description"),
     @NamedQuery(name = "Movie.findByTrailer", query = "SELECT m FROM Movie m WHERE m.trailer = :trailer"),
     @NamedQuery(name = "Movie.findByPoster", query = "SELECT m FROM Movie m WHERE m.poster = :poster")})
-public class Movie implements Serializable {
+public class Movie implements EntityItem {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

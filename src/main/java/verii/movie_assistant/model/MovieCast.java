@@ -28,7 +28,7 @@ import javax.persistence.Table;
 @NamedQueries({
     @NamedQuery(name = "MovieCast.findAll", query = "SELECT m FROM MovieCast m"),
     @NamedQuery(name = "MovieCast.findById", query = "SELECT m FROM MovieCast m WHERE m.id = :id")})
-public class MovieCast implements Serializable {
+public class MovieCast implements EntityItem {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -39,7 +39,7 @@ import javax.validation.constraints.Size;
     @NamedQuery(name = "MoviePerson.findByMiddleName", query = "SELECT m FROM MoviePerson m WHERE m.middleName = :middleName"),
     @NamedQuery(name = "MoviePerson.findByBirthDate", query = "SELECT m FROM MoviePerson m WHERE m.birthDate = :birthDate"),
     @NamedQuery(name = "MoviePerson.findByTradeMark", query = "SELECT m FROM MoviePerson m WHERE m.tradeMark = :tradeMark")})
-public class MoviePerson implements Serializable {
+public class MoviePerson implements EntityItem {
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
