@@ -9,21 +9,21 @@ package verii.movie_assistant.dao;
 import java.util.List;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
-import verii.movie_assistant.model.CastType;
+import verii.movie_assistant.model.Genre;
 
 /**
  *
  * @author Verii
  */
-public class CastTypeDaoImpl extends GenericDaoImpl<CastType,Integer> implements CastTypeDao  {
-
-    public CastTypeDaoImpl() {
-        super(CastType.class);
+public class GenreDaoImpl extends GenericDaoImpl<Genre,Integer> implements GenreDao {
+    
+     public GenreDaoImpl() {
+        super(Genre.class);
     }
 
     @Override
     @Transactional(readOnly = true,propagation = Propagation.SUPPORTS)
-    public List<CastType> findAll() {
-      return em.createNamedQuery("CastType.findAll").getResultList();
+    public List<Genre> findAll() {
+      return em.createNamedQuery("Genre.findAll").getResultList();
     }
 }

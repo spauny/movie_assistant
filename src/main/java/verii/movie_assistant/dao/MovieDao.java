@@ -7,13 +7,16 @@
 package verii.movie_assistant.dao;
 
 import java.util.List;
-import verii.movie_assistant.model.CastType;
+import verii.movie_assistant.model.Movie;
 
 /**
  *
  * @author Verii
  */
-public interface CastTypeDao extends GenericDao<CastType,Integer> {
+public interface MovieDao extends GenericDao<Movie,Integer> {
     
-    List<CastType> findAll();
+    List<Movie> findAll();
+    List<Movie>findByTitle(String inTitle);
 }
+    
+
