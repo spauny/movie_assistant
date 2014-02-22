@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://java.sun.com/xml/ns/persistence" 
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+             xsi:schemaLocation="http://java.sun.com/xml/ns/persistence 
+                                 http://java.sun.com/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="moviePU" transaction-type="RESOURCE_LOCAL">
+        <provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+        <class>verii.movie_assistant.model.CastType</class>
+        <class>verii.movie_assistant.model.Genre</class>
+        <class>verii.movie_assistant.model.Movie</class>
+        <class>verii.movie_assistant.model.MovieCast</class>
+        <class>verii.movie_assistant.model.MovieGenre</class>
+        <class>verii.movie_assistant.model.MoviePerson</class>
+        <exclude-unlisted-classes>true</exclude-unlisted-classes>
+        <properties>
+            <property name="eclipselink.logging.level" value="WARNING"/>
+        </properties>
+    </persistence-unit>
+</persistence>

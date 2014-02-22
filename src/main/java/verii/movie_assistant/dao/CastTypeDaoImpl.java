@@ -7,6 +7,7 @@
 package verii.movie_assistant.dao;
 
 import java.util.List;
+import org.springframework.stereotype.Repository;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
 import verii.movie_assistant.model.CastType;
@@ -15,6 +16,8 @@ import verii.movie_assistant.model.CastType;
  *
  * @author Verii
  */
+@Repository("castTypeDao")
+@Transactional
 public class CastTypeDaoImpl extends GenericDaoImpl<CastType,Integer> implements CastTypeDao  {
 
     public CastTypeDaoImpl() {

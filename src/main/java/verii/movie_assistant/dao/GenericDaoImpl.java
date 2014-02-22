@@ -12,7 +12,7 @@ import verii.movie_assistant.model.EntityItem;
 public class GenericDaoImpl<T, ID extends Serializable> implements GenericDao<T, ID> {
 
     final protected Logger logger = LoggerFactory.getLogger(this.getClass());
-    @PersistenceContext(unitName = "tttPU")
+    @PersistenceContext(unitName = "moviePU")
     protected EntityManager em;
     private final Class<T> type;
 

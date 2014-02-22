@@ -1,6 +1,8 @@
 package verii.movie_assistant.model;
 
-public interface EntityItem<T> {
+import java.io.Serializable;
+
+public interface EntityItem<T> extends Serializable {
     
     public T getId();
     
